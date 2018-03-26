@@ -16,7 +16,7 @@ var ctx = {
     shaderProgram: -1,
     aVertexPositionId: -1,
     uColorId: -1,
-    aColorId: -1,
+    aVertexColorId: -1,
     aVertexTextureCoordId: -1,
     uSamplerId: -1
 };
@@ -95,7 +95,7 @@ function setUpAttributesAndUniforms(){
     "use strict";
     ctx.aVertexPositionId = gl.getAttribLocation(ctx.shaderProgram,"aVertexPosition");
     ctx.uColorId = gl.getUniformLocation(ctx.shaderProgram, "uColor");
-    ctx.aColorId = gl.getAttribLocation(ctx.shaderProgram, "aColor");
+    ctx.aVertexColorId = gl.getAttribLocation(ctx.shaderProgram, "aColor");
     ctx.uSamplerId = gl.getUniformLocation(ctx.shaderProgram, "uSampler");
     ctx.aVertexTextureCoordId = gl.getAttribLocation(ctx.shaderProgram, "aVertexTextureCoord");
 
@@ -139,9 +139,9 @@ function draw() {
 
     gl.bindBuffer(gl.ARRAY_BUFFER, rectangleObject.buffer);
     gl.vertexAttribPointer(ctx.aVertexPositionId, 2, gl.FLOAT, false, 20, 0); //es müssen 20 Bytes übersprungen werden um auf die Koordinaten des nächsten Punktes zu kommen
-    gl.vertexAttribPointer(ctx.aColorId, 3, gl.FLOAT, false, 20, 8); // RGB beginnt nach 8 Bytes (ersten 2 Werte werden übersprungen)
+    gl.vertexAttribPointer(ctx.aVertexColorId, 3, gl.FLOAT, false, 20, 8); // RGB beginnt nach 8 Bytes (ersten 2 Werte werden übersprungen)
     gl.enableVertexAttribArray(ctx.aVertexPositionId);
-    gl.enableVertexAttribArray(ctx.aColorId);
+    gl.enableVertexAttribArray(ctx.aVertexColorId);
 
     gl.bindBuffer(gl.ARRAY_BUFFER, rectangleObject.textureBuffer);
     gl.vertexAttribPointer(ctx.aVertexTextureCoordId, 2, gl.FLOAT, false,0,0);

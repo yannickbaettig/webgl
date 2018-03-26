@@ -35,8 +35,8 @@ var ctx = {
     shaderProgram: -1,
     aVertexPositionId: -1,
     uColorId: -1,
-    uProjectionMatId: -1,
-    uModelMatId: -1
+    uProjectionMatrixId: -1,
+    uModelViewMatrixId: -1
 };
 
 // we keep all the parameters for drawing a specific object together
@@ -69,7 +69,7 @@ function initGL() {
     gl.clearColor(0.1, 0.1, 0.1, 1);
     var projectionMat = mat3.create();
     mat3.fromScaling(projectionMat, [2.0 / gl.drawingBufferWidth, 2.0 / gl.drawingBufferHeight]);
-    gl.uniformMatrix3fv(ctx.uProjectionMatId, false, projectionMat);
+    gl.uniformMatrix3fv(ctx.uProjectionMatrixId, false, projectionMat);
     game.paddle.positionXPaddleLeft = -gl.drawingBufferWidth / 2 * 0.9;
     game.paddle.positionXPaddleRight = gl.drawingBufferWidth / 2 * 0.9;
 }
@@ -81,8 +81,8 @@ function setUpAttributesAndUniforms(){
     "use strict";
     ctx.aVertexPositionId = gl.getAttribLocation(ctx.shaderProgram, "aVertexPosition");
     ctx.uColorId = gl.getUniformLocation(ctx.shaderProgram, "uColor");
-    ctx.uProjectionMatId = gl.getUniformLocation(ctx.shaderProgram, "uProjectionMat");
-    ctx.uModelMatId = gl.getUniformLocation(ctx.shaderProgram, "uModelMat");
+    ctx.uProjectionMatrixId = gl.getUniformLocation(ctx.shaderProgram, "uProjectionMat");
+    ctx.uModelViewMatrixId = gl.getUniformLocation(ctx.shaderProgram, "uModelMat");
 }
 
 /**
@@ -213,7 +213,7 @@ function drawSquare(positionX, positionY) {
     var modelMat = mat3.create();
     mat3.fromTranslation(modelMat, [positionX,positionY]);
     mat3.scale(modelMat,modelMat, [game.paddle.paddleWidth, game.paddle.paddleHeight]);
-    gl.uniformMatrix3fv(ctx.uModelMatId, false, modelMat);
+    gl.uniformMatrix3fv(ctx.uModelViewMatrixId, false, modelMat);
 
     gl.uniform4f(ctx.uColorId, 1, 1, 1, 1);
     gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);
@@ -223,7 +223,7 @@ function drawBall(positionX, positionY) {
     var modelMat = mat3.create();
     mat3.fromTranslation(modelMat, [positionX,positionY]);
     mat3.scale(modelMat,modelMat, [10, 10]);
-    gl.uniformMatrix3fv(ctx.uModelMatId, false, modelMat);
+    gl.uniformMatrix3fv(ctx.uModelViewMatrixId, false, modelMat);
 
     gl.uniform4f(ctx.uColorId, 1, 1, 1, 1);
     gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);
@@ -233,7 +233,7 @@ function drawBall(positionX, positionY) {
 function drawLine() {
     var modelMat = mat3.create();
     mat3.fromScaling(modelMat, [1, gl.drawingBufferHeight]);
-    gl.uniformMatrix3fv(ctx.uModelMatId, false, modelMat);
+    gl.uniformMatrix3fv(ctx.uModelViewMatrixId, false, modelMat);
 
     gl.uniform4f(ctx.uColorId, 1, 1, 1, 1);
     gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);

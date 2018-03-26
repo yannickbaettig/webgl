@@ -15,9 +15,9 @@ var ctx = {
     shaderProgram: -1,
     aVertexPositionId: -1,
     uColorId: -1,
-    uProjectionMatId: -1,
-    uModelMatId: -1,
-    aColorId: -1
+    uProjectionMatrixId: -1,
+    uModelViewMatrixId: -1,
+    aVertexColorId: -1
 };
 
 // we keep all the parameters for drawing a specific object together
@@ -64,9 +64,9 @@ function setUpAttributesAndUniforms(){
     "use strict";
     ctx.aVertexPositionId = gl.getAttribLocation(ctx.shaderProgram, "aVertexPosition");
     ctx.uColorId = gl.getUniformLocation(ctx.shaderProgram, "uColor");
-    ctx.aColorId = gl.getAttribLocation(ctx.shaderProgram, "aColor");
-    ctx.uProjectionMatId = gl.getUniformLocation(ctx.shaderProgram, "uProjectionMat");
-    ctx.uModelMatId = gl.getUniformLocation(ctx.shaderProgram, "uModelMat");
+    ctx.aVertexColorId = gl.getAttribLocation(ctx.shaderProgram, "aColor");
+    ctx.uProjectionMatrixId = gl.getUniformLocation(ctx.shaderProgram, "uProjectionMat");
+    ctx.uModelViewMatrixId = gl.getUniformLocation(ctx.shaderProgram, "uModelMat");
 }
 
 /**
@@ -91,13 +91,13 @@ function draw() {
     mat4.lookAt(modelView, [0,2,3], [0.5,0.5,0.5],[0,1,0]);
     mat4.rotateY(modelView,modelView, rotationY);
     mat4.translate(modelView, modelView, [-0.5,-0.5,-0.5]);
-    gl.uniformMatrix4fv(ctx.uModelMatId, false, modelView );
+    gl.uniformMatrix4fv(ctx.uModelViewMatrixId, false, modelView );
 
     var projectionMatrix = mat4.create();
     mat4.perspective(projectionMatrix,1.745, gl.drawingBufferWidth / gl.drawingBufferHeight ,1,20);
-    gl.uniformMatrix4fv(ctx.uProjectionMatId, false, projectionMatrix);
+    gl.uniformMatrix4fv(ctx.uProjectionMatrixId, false, projectionMatrix);
 
-    wiredCube.draw(gl, ctx.aVertexPositionId, ctx.aColorId);
+    wiredCube.draw(gl, ctx.aVertexPositionId, ctx.aVertexColorId);
 
     rotationY += 0.01;
 

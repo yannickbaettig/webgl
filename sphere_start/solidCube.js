@@ -7,7 +7,7 @@
     7 * @returns object with draw method
     8 * @constructor
     9 */
-    function WireFrameCube ( gl , color ) {
+    function Cube (gl , color ) {
 
         function defineColor ( gl ) {
             // define the vertices of the cube
@@ -92,7 +92,7 @@
                 0, 1, 0, //V4 20
                 1, 1, 0, //V5 21
                 1, 1, 1, //V6 22
-                0, 1, 1, //V7 2
+                0, 1, 1 //V7 2
             ];
 
             var buffer = gl.createBuffer () ;
@@ -100,6 +100,51 @@
             gl.bufferData ( gl . ARRAY_BUFFER , new Float32Array ( vertices ) , gl.STATIC_DRAW ) ;
             return buffer ;
 
+        }
+
+        function defineNormal ( gl ) {
+            // define the normal for the cube , there are 12 edges in a cube
+            var vertexNormal  = [
+                //Unten
+                0, -1, 0, //V0 0
+                0, -1, 0, //V1 1
+                0, -1, 0, //V2 2
+                0, -1, 0, //V3 3
+
+                //Vorne
+                0, 0, -1, //V0 4
+                0, 0, -1, //V1 5
+                0, 0, -1, //V5 6
+                0, 0, -1, //V4 7
+
+                //Rechts
+                1, 0, 0, //V1 8
+                1, 0, 0, //V2 9
+                1, 0, 0, //V6 10
+                1, 0, 0, //V5 11
+
+                //Hinten
+                0, 0, 1, //V2 12
+                0, 0, 1, //V3 13
+                0, 0, 1, //V7 14
+                0, 0, 1, //V6 15
+
+                //Links
+                -1, 0, 0, //V3 16
+                -1, 0, 0, //V0 17
+                -1, 0, 0, //V4 18
+                -1, 0, 0, //V7 19
+
+                //Oben
+                0, 1, 0, //V4 20
+                0, 1, 0, //V5 21
+                0, 1, 0, //V5 22
+                0, 1, 0  //V4 23
+            ];
+            var buffer = gl.createBuffer () ;
+            gl.bindBuffer ( gl.ARRAY_BUFFER , buffer ) ;
+            gl.bufferData ( gl.ARRAY_BUFFER , new Float32Array (vertexNormal) , gl.STATIC_DRAW ) ;
+            return buffer ;
         }
 
         function defineEdges ( gl ) {
@@ -129,20 +174,26 @@
             return buffer ;
         }
 
+
         return {
             bufferVertices : defineVertices ( gl ) ,
             bufferEdges : defineEdges ( gl ) ,
+            bufferNormal: defineNormal (gl),
             bufferColors: defineColor(gl),
             color : color,
 
-            draw : function ( gl ,aVertexPositionId , aColorId ) {
+            draw : function ( gl ,aVertexPositionId , aVertexColorId, aVertexNormalId ) {
                 gl.bindBuffer(gl.ARRAY_BUFFER, this.bufferVertices);
                 gl.vertexAttribPointer(aVertexPositionId, 3, gl.FLOAT, false, 0, 0);
                 gl.enableVertexAttribArray(aVertexPositionId);
 
                 gl.bindBuffer(gl.ARRAY_BUFFER, this.bufferColors);
-                gl.vertexAttribPointer(aColorId, 3, gl.FLOAT, false, 0, 0);
-                gl.enableVertexAttribArray(aColorId);
+                gl.vertexAttribPointer(aVertexColorId, 3, gl.FLOAT, false, 0, 0);
+                gl.enableVertexAttribArray(aVertexColorId);
+
+                gl.bindBuffer(gl.ARRAY_BUFFER, this.bufferNormal);
+                gl.vertexAttribPointer(aVertexNormalId, 3, gl.FLOAT, false, 0, 0);
+                gl.enableVertexAttribArray(aVertexNormalId);
 
                 gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.bufferEdges);
 
