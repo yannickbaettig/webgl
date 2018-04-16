@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c70e8fcd-98c9-45bd-97d7-a345137cb52a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/toon_shader/FragmentShader.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toon_shader/VertexShader.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toon_shader/gl-matrix.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toon_shader/shaderUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toon_shader/solidCube.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toon_shader/solidSphere.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toon_shader/sphere.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toon_shader/toon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toon_shader/webgl-debug.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,63 +25,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FragmentShader.glsl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sphere_start/FragmentShader.glsl">
+      <file leaf-file-name="FragmentShaderToon.glsl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/objectLoadExample/FragmentShaderToon.glsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
+            <state relative-caret-position="870">
+              <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="VertexShader.glsl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sphere_start/VertexShader.glsl">
+        <entry file="file://$PROJECT_DIR$/objectLoadExample/VertexShader.glsl">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="FragmentShader.glsl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/toon_shader/FragmentShader.glsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="840">
+              <caret line="56" column="27" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="sphere.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sphere_start/sphere.js">
+        <entry file="file://$PROJECT_DIR$/toon_shader/sphere.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="111" column="55" selection-start-line="111" selection-start-column="55" selection-end-line="111" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="solidCube.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sphere_start/solidCube.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjLoaderTest.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objectLoadExample/ObjLoaderTest.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="FragmentShaderToon.glsl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/objectLoadExample/FragmentShaderToon.glsl">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="solidSphere.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sphere_start/solidSphere.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="20" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="20" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="363">
+              <caret line="68" column="84" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -115,6 +95,10 @@
         <option value="$PROJECT_DIR$/sphere_start/solidCube.js" />
         <option value="$PROJECT_DIR$/sphere_start/FragmentShader.glsl" />
         <option value="$PROJECT_DIR$/sphere_start/sphere.js" />
+        <option value="$PROJECT_DIR$/objectLoadExample/Exercise.js" />
+        <option value="$PROJECT_DIR$/objectLoadExample/FragmentShaderToon.glsl" />
+        <option value="$PROJECT_DIR$/toon_shader/toon.html" />
+        <option value="$PROJECT_DIR$/toon_shader/FragmentShader.glsl" />
       </list>
     </option>
   </component>
@@ -154,27 +138,12 @@
             <path>
               <item name="WebGL" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebGL" type="462c0819:PsiDirectoryNode" />
-              <item name="cube_start" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebGL" type="462c0819:PsiDirectoryNode" />
               <item name="objectLoadExample" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebGL" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebGL" type="462c0819:PsiDirectoryNode" />
-              <item name="pong_start" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebGL" type="462c0819:PsiDirectoryNode" />
-              <item name="sphere_start" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebGL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebGL" type="462c0819:PsiDirectoryNode" />
-              <item name="webgl_start" type="462c0819:PsiDirectoryNode" />
+              <item name="toon_shader" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -193,14 +162,14 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/pong_start" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/cube_start" />
       <recent name="$PROJECT_DIR$/sphere_start" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/pong_start" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -215,12 +184,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.ObjLoaderTest.html">
-    <configuration name="Exercise1.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webgl_start/Exercise1.html" />
+  <component name="RunManager">
     <configuration name="ObjLoaderTest.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/WebGL/objectLoadExample/ObjLoaderTest.html" />
     <configuration name="cube.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/WebGL/cube_start/cube.html" />
     <configuration name="pong.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/WebGL/pong_start/pong.html" />
     <configuration name="sphere.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/WebGL/sphere_start/sphere.html" />
+    <configuration name="toon.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/WebGL/toon_shader/toon.html" />
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
@@ -298,19 +267,19 @@
       <envs />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.Exercise1.html" />
       <item itemvalue="JavaScript Debug.pong.html" />
       <item itemvalue="JavaScript Debug.cube.html" />
       <item itemvalue="JavaScript Debug.sphere.html" />
       <item itemvalue="JavaScript Debug.ObjLoaderTest.html" />
+      <item itemvalue="JavaScript Debug.toon.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.toon.html" />
         <item itemvalue="JavaScript Debug.ObjLoaderTest.html" />
         <item itemvalue="JavaScript Debug.sphere.html" />
         <item itemvalue="JavaScript Debug.cube.html" />
         <item itemvalue="JavaScript Debug.pong.html" />
-        <item itemvalue="JavaScript Debug.Exercise1.html" />
       </list>
     </recent_temporary>
   </component>
@@ -332,7 +301,7 @@
       <workItem from="1521453336955" duration="14018000" />
       <workItem from="1521487179890" duration="444000" />
       <workItem from="1522060361862" duration="13129000" />
-      <workItem from="1523886451828" duration="645000" />
+      <workItem from="1523886451828" duration="4274000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1520266397785</created>
@@ -376,11 +345,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522086125741</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="object load">
+      <created>1523888172237</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1523888172238</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60054000" />
+    <option name="totallyTimeSpent" value="63683000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -390,6 +366,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50555557" side_tool="true" weight="0.26705882" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49722221" weight="0.32900944" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32941177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -409,7 +386,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Running Result" order="13" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49722221" weight="0.32941177" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +399,8 @@
     <MESSAGE value="pong" />
     <MESSAGE value="cube" />
     <MESSAGE value="sphere" />
-    <option name="LAST_COMMIT_MESSAGE" value="sphere" />
+    <MESSAGE value="object load" />
+    <option name="LAST_COMMIT_MESSAGE" value="object load" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -431,15 +408,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Exercise1.html" />
-    <entry file="file://$PROJECT_DIR$/VertexShader.glsl" />
-    <entry file="file://$PROJECT_DIR$/FragmentShader.glsl" />
-    <entry file="file://$PROJECT_DIR$/gl-matrix.js" />
-    <entry file="file://$PROJECT_DIR$/shaderUtils.js" />
-    <entry file="file://$PROJECT_DIR$/Exercise1.js" />
-    <entry file="file://$PROJECT_DIR$/Exercise1.html" />
-    <entry file="file://$PROJECT_DIR$/FragmentShader.glsl" />
-    <entry file="file://$PROJECT_DIR$/gl-matrix.js" />
     <entry file="file://$PROJECT_DIR$/shaderUtils.js" />
     <entry file="file://$PROJECT_DIR$/Exercise1.js" />
     <entry file="file://$PROJECT_DIR$/VertexShader.glsl" />
@@ -450,7 +418,13 @@
     <entry file="file://$PROJECT_DIR$/gl-matrix.js" />
     <entry file="file://$PROJECT_DIR$/Exercise1.html" />
     <entry file="file://$PROJECT_DIR$/webgl_start/Exercise1.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webgl_start/Exercise1.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -528,13 +502,22 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/solutionExercise5/shaderUtils.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sphere_start/FragmentShaderLightingExercise.glsl" />
     <entry file="file://$PROJECT_DIR$/sphere_start/shaderUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1185">
           <caret line="79" column="59" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="59" />
+          <folding>
+            <element signature="n#!!doc" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -594,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sphere_start/FragmentShader.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sphere_start/VertexShader.glsl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -645,8 +621,90 @@
     <entry file="file://$PROJECT_DIR$/objectLoadExample/ObjLoaderTest.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/sphere_start/FragmentShader.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objectLoadExample/webgl-debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objectLoadExample/shaderUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="66" column="66" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="66" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toon_shader/solidCube.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toon_shader/shaderUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toon_shader/toon.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/objectLoadExample/FragmentShaderToon.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objectLoadExample/VertexShader.glsl">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toon_shader/sphere.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="68" column="84" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/objectLoadExample/Exercise.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-159">
+          <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toon_shader/FragmentShader.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="27" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="27" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
